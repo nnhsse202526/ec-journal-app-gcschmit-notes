@@ -14,7 +14,21 @@
 
   <div>
     <label>Date <input type="date" class="date" /></label>
-    <label>Employability Competency <input type="text" class="EC" /></label>
+    <fieldset>
+      <legend>Employability Competencies</legend>
+
+      <% for(let competency of comps) { %>
+      <label
+        ><input
+          type="radio"
+          class="competencies"
+          name="competencies"
+          value="<%= competency %>"
+        />
+        <%= competency %>
+      </label>
+      <% } %>
+    </fieldset>
     <label
       >Journal Entry <textarea class="content">my journal entry</textarea>
     </label>

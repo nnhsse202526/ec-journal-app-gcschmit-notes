@@ -6,7 +6,20 @@
 const submitButton = document.querySelector("input.submit");
 submitButton.addEventListener("click", () => {
   const date = document.querySelector("input.date").value;
-  const employabilityCompetency = document.querySelector("input.EC").value;
+
+  // a more sophisticated select that selects all input elements of
+  //  a class competency that are checked
+  const ecButtons = document.querySelectorAll("input.competency:checked");
+
+  // the ternary operator is a shortcut for an if-else statement
+  // const employabilityCompetency;
+  //  if(ecButtons.length > 0) {
+  //      employabilityCompetency = ecButtons[0].value;
+  //  } else {
+  //      employabilityCompetency = null;
+  // }
+  const employabilityCompetency =
+    ecButtons.length > 0 ? ecButtons[0].value : null;
   const content = document.querySelector("textarea.content").value;
 
   console.log(date + "; " + employabilityCompetency + "; " + content);
