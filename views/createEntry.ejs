@@ -11,12 +11,20 @@
     height="100"
   />
   <h1>Employability Competencies Journal</h1>
-  <button class="createEntry">Create Entry</button>
+
+  <div>
+    <label>Date <input type="date" class="date" /></label>
+    <label>Employability Competency <input type="text" class="EC" /></label>
+    <label
+      >Journal Entry <textarea class="content">my journal entry</textarea>
+    </label>
+    <input type="submit" class="submit" value="Submit" />
+  </div>
 </main>
 
 <!-- /Main Site -->
 
-<script src="/js/index.js"></script>
+<script src="/js/createEntry.js"></script>
 
 <!-- include footer -->
 <%- include('include/_footer') %>
